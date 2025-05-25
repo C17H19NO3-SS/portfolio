@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vehbi Taha Edis - Portfolio</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #0c0c0c 0%,
+          #1a1a1a 50%,
+          #0f0f0f 100%
+        );
+      }
+
+      .card-glass {
+        background: rgba(20, 20, 20, 0.9);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .skill-bar {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .skill-progress {
+        height: 100%;
+        background: linear-gradient(90deg, #4ade80, #06b6d4, #8b5cf6);
+        border-radius: inherit;
+        transition: width 2s ease-in-out;
+        animation: skillLoad 2s ease-in-out;
+      }
+
+      @keyframes skillLoad {
+        from {
+          width: 0%;
+        }
+      }
+
+      .floating-animation {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .glow-effect {
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.2),
+          0 0 60px rgba(6, 182, 212, 0.1);
+      }
+
+      .text-gradient {
+        background: linear-gradient(45deg, #4ade80, #06b6d4, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+
+      .typing-animation {
+        border-right: 2px solid #4ade80;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          border-color: transparent;
+        }
+        51%,
+        100% {
+          border-color: #4ade80;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen gradient-bg flex items-center justify-center p-4">
+    <div class="max-w-6xl w-full">
+      <!-- Ana Kart -->
+      <div class="card-glass rounded-3xl p-8 shadow-2xl glow-effect">
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <!-- Sol Panel - Profil -->
+          <div class="md:col-span-1 text-center">
+            <div class="relative mb-6 floating-animation">
+              <img
+                src="https://images-ext-1.discordapp.net/external/VnpFlhiGxIzlnt-jfEMZmec685SAbncNuCg8ERH-rns/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/885968419101474846/91d079b342bb08595333681ea1a9abd1.png?format=webp&quality=lossless&width=192&height=192"
+                alt="Vehbi Taha Edis"
+                class="w-48 h-48 rounded-full mx-auto border-4 border-white/30 shadow-lg hover-scale"
+              />
+              <div
+                class="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full border-4 border-white flex items-center justify-center"
+              >
+                <i class="fas fa-code text-white text-sm"></i>
+              </div>
+            </div>
+
+            <h1 class="text-3xl font-bold text-white mb-2">Vehbi Taha Edis</h1>
+            <p
+              class="text-lg text-gradient font-semibold mb-4 typing-animation"
+            >
+              C17H19NO3-SS
+            </p>
+            <p class="text-white/80 text-sm mb-6">Full Stack Developer</p>
+
+            <!-- Sosyal Medya Butonları -->
+            <div class="space-y-4">
+              <a
+                href="https://discordapp.com/users/885968419101474846"
+                class="w-full flex items-center justify-center gap-3 py-3 px-6 bg-[#7289da] rounded-full hover:bg-[#5865f2] transition-all duration-300 text-white font-medium hover-scale shadow-lg"
+                target="_blank"
+              >
+                <i class="fab fa-discord text-xl"></i>
+                <span>Discord</span>
+              </a>
+              <a
+                href="https://github.com/c17h19no3-ss"
+                class="w-full flex items-center justify-center gap-3 py-3 px-6 bg-[#2b3137] rounded-full hover:bg-[#1a1e23] transition-all duration-300 text-white font-medium hover-scale shadow-lg"
+                target="_blank"
+              >
+                <i class="fab fa-github text-xl"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Sağ Panel - İçerik -->
+          <div class="md:col-span-2 space-y-8">
+            <!-- Hakkımda Bölümü -->
+            <div
+              class="bg-black/30 rounded-2xl p-6 backdrop-blur-sm border border-gray-800"
+            >
+              <h2
+                class="text-2xl font-bold text-white mb-4 flex items-center gap-2"
+              >
+                <i class="fas fa-user text-gradient"></i>
+                Ben Kimim?
+              </h2>
+              <p class="text-gray-300 leading-relaxed text-sm">
+                Merhaba! Ben Vehbi Taha Edis, yazılım dünyasında daha çok
+                <strong class="text-white">C17H19NO3-SS</strong> takma adımla
+                biliniyorum.
+                <span class="text-gradient font-semibold">Altı yıldır</span>
+                yazılımla iç içeyim ve bu sürenin büyük bir kısmını
+                <strong class="text-white">JavaScript ekosistemine</strong>
+                adadım. Hem backend hem de frontend alanlarında sayısız proje
+                geliştirerek kendimi sürekli yeniledim ve bu projelerimin
+                birçoğunu GitHub profilimde paylaştım. JavaScript'e olan
+                tutkumla, yenilikçi ve kullanıcı odaklı çözümler üretmeye devam
+                ediyorum.
+              </p>
+            </div>
+
+            <!-- Yetenekler Bölümü -->
+            <div
+              class="bg-black/30 rounded-2xl p-6 backdrop-blur-sm border border-gray-800"
+            >
+              <h2
+                class="text-2xl font-bold text-white mb-6 flex items-center gap-2"
+              >
+                <i class="fas fa-code text-gradient"></i>
+                Yeteneklerim
+              </h2>
+
+              <div class="space-y-6">
+                <!-- JavaScript -->
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <i class="fab fa-js-square text-3xl text-[#f7df1e]"></i>
+                      <span class="text-white font-semibold">JavaScript</span>
+                    </div>
+                    <span class="text-white/80 font-medium">70%</span>
+                  </div>
+                  <div
+                    class="skill-bar bg-gray-800/60 rounded-full h-3 border border-gray-700"
+                  >
+                    <div
+                      class="skill-progress rounded-full"
+                      style="width: 70%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- HTML5 -->
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <i class="fab fa-html5 text-3xl text-[#e34f26]"></i>
+                      <span class="text-white font-semibold">HTML5</span>
+                    </div>
+                    <span class="text-gray-300 font-medium">90%</span>
+                  </div>
+                  <div
+                    class="skill-bar bg-gray-800/60 rounded-full h-3 border border-gray-700"
+                  >
+                    <div
+                      class="skill-progress rounded-full"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <i class="fab fa-css3-alt text-3xl text-[#1572b6]"></i>
+                      <span class="text-white font-semibold">CSS3</span>
+                    </div>
+                    <span class="text-gray-300 font-medium">60%</span>
+                  </div>
+                  <div
+                    class="skill-bar bg-gray-800/60 rounded-full h-3 border border-gray-700"
+                  >
+                    <div
+                      class="skill-progress rounded-full"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- İstatistikler -->
+            <div class="grid grid-cols-3 gap-4">
+              <div
+                class="bg-black/30 rounded-xl p-4 text-center backdrop-blur-sm hover-scale border border-gray-800 cursor-pointer"
+              >
+                <div class="text-2xl font-bold text-gradient">6+</div>
+                <div class="text-gray-400 text-sm">Yıl Tecrübe</div>
+              </div>
+              <div
+                class="bg-black/30 rounded-xl p-4 text-center backdrop-blur-sm hover-scale border border-gray-800 cursor-pointer"
+              >
+                <div class="text-2xl font-bold text-gradient">50+</div>
+                <div class="text-gray-400 text-sm">Proje</div>
+              </div>
+              <div
+                class="bg-black/30 rounded-xl p-4 text-center backdrop-blur-sm hover-scale border border-gray-800 cursor-pointer"
+              >
+                <div class="text-2xl font-bold text-gradient">100%</div>
+                <div class="text-gray-400 text-sm">Motivasyon</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alt Bilgi -->
+      <div class="text-center mt-8">
+        <p class="text-gray-500 text-sm">
+          Made with <i class="fas fa-heart text-red-500 animate-pulse"></i> by
+          Vehbi Taha Edis
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Sayfa yüklendiğinde animasyonları başlat
+      document.addEventListener("DOMContentLoaded", function () {
+        // Skill bar animasyonları
+        const skillBars = document.querySelectorAll(".skill-progress");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.width = entry.target.style.width;
+            }
+          });
+        });
+
+        skillBars.forEach((bar) => observer.observe(bar));
+      });
+    </script>
+  </body>
+</html>
